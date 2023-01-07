@@ -9,7 +9,8 @@ import org.apache.ibatis.annotations.Select;
 public interface user_mapper {
     @Insert("INSERT INTO user VALUES (#{id}, #{password}, #{name});")
     boolean insertUser(@Param("id")String id, @Param("password")String pw, @Param("name")String name);
-
     @Select("SELECT COUNT(*) FROM user WHERE id=#{id};")
     int checkID(@Param("id")String id);
+    @Select("SELECT COUNT(*) FROM user WHERE id=#{id} AND password=#{password};")
+    int Login(@Param("id")String id, @Param("password")String pw);
 }
