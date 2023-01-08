@@ -1,18 +1,17 @@
 package com.project222.affiliate_mapper.Model;
 
-
-public class Review {
+public class Notice {
     String id;
     String date;
     String market_name;
-    String review_text;
+    String notice_text;
 
-    public String getDate() {
-        return date;
+    public String getNotice_text() {
+        return notice_text;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setNotice_text(String notice_text) {
+        this.notice_text = notice_text;
     }
 
     public String getId() {
@@ -23,6 +22,13 @@ public class Review {
         this.id = id;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getMarket_name() {
         return market_name;
@@ -32,11 +38,4 @@ public class Review {
         this.market_name = market_name;
     }
 
-    public String getReview_text() {
-        return review_text;
-    }
-
-    public void setReview_text(String review_text) {
-        this.review_text = review_text;
-    }
 }

@@ -1,17 +1,26 @@
 package com.project222.affiliate_mapper.Model;
 
 public class Favorite {
-    int post_id;
     String user_id;
-    int market_id;
-    String market_name;
+    String date;
+   String market_name;
 
-    public int getMarket_id() {
-        return market_id;
+   String market_info;
+
+    public String getDate() {
+        return date;
     }
 
-    public void setMarket_id(int market_id) {
-        this.market_id = market_id;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getMarket_info() {
+        return market_info;
+    }
+
+    public void setMarket_info(String market_info) {
+        this.market_info = market_info;
     }
 
     public String getMarket_name() {
@@ -21,15 +30,6 @@ public class Favorite {
     public void setMarket_name(String market_name) {
         this.market_name = market_name;
     }
-
-    public int getPost_id() {
-        return post_id;
-    }
-
-    public void setPost_id(int post_id) {
-        this.post_id = post_id;
-    }
-
     public String getUser_id() {
         return user_id;
     }
