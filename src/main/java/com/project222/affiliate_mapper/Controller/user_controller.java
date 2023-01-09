@@ -31,5 +31,9 @@ public class user_controller {
     public boolean Login(@RequestBody UserShortModel model){
         return mapper.Login(model.getId(), model.getPassword()) > 0;
     }
+    @GetMapping("/user/getUserName/{id}")
+    public String getUserName(@PathVariable String id){
+        return mapper.getUserName(id);
+    }
 
 }

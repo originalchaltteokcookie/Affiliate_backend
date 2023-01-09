@@ -17,16 +17,16 @@ public class review_controller {
     review_mapper mapper;
     public review_controller(review_mapper mapper){this.mapper=mapper;}
 
-    @PutMapping("/review/addReview/{id}/{date}/{market_name}/{review_text}")
-    public boolean insertReview(@PathVariable String id, @PathVariable String date, @PathVariable String market_name, @PathVariable String review_text){
-        return mapper.insertReview(id, date, market_name, review_text);
+    @PutMapping("/review/addReview/{user_name}/{market_name}/{date}/{review_text}")
+    public boolean insertReview(@PathVariable String user_name, @PathVariable String market_name, @PathVariable String date, @PathVariable String review_text){
+        return mapper.insertReview(user_name, market_name, date, review_text);
     }
-    @GetMapping("review/getReview/{id}")
-    public LinkedList<Review> getReview_id(@PathVariable String id){
-        return mapper.getReview_id(id);
+    @GetMapping("/review/getReview_user_name/{user_name}")
+    public LinkedList<Review> getReview_user_name(@PathVariable String user_name){
+        return mapper.getReview_user_name(user_name);
     }
 
-    @GetMapping("review/getReview/{market_name)}")
+    @GetMapping("/review/getReview/{market_name}")
     public LinkedList<Review> getReview(@PathVariable String market_name){
         return mapper.getReview(market_name);
     }

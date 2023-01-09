@@ -2,7 +2,7 @@ package com.project222.affiliate_mapper.Model;
 
 
 public class Review {
-    String id;
+    String name;
     String date;
     String market_name;
     String review_text;
@@ -10,20 +10,9 @@ public class Review {
     public String getDate() {
         return date;
     }
-
     public void setDate(String date) {
         this.date = date;
     }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-
     public String getMarket_name() {
         return market_name;
     }

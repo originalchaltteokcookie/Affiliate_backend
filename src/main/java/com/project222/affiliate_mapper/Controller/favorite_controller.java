@@ -16,7 +16,7 @@ public class favorite_controller {
     favorite_mapper mapper;
     public favorite_controller(favorite_mapper mapper){this.mapper = mapper;}
 
-    @PutMapping("/favorite/addFavorite/{id}/{date}/{market_name}/{market_info")
+    @PutMapping("/favorite/addFavorite/{id}/{date}/{market_name}/{market_info}")
     public boolean insertFavorite(@PathVariable String id, @PathVariable String date, @PathVariable String market_name, @PathVariable String market_info){
         return mapper.insertFavorite(id, date, market_name, market_info);
     }

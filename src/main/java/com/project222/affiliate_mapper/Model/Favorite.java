@@ -4,7 +4,6 @@ public class Favorite {
     String user_id;
     String date;
    String market_name;
-
    String market_info;
 
     public String getDate() {

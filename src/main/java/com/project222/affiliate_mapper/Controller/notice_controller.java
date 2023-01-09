@@ -15,7 +15,7 @@ public class notice_controller {
 
     public notice_controller(notice_mapper mapper){this.mapper=mapper;}
 
-    @GetMapping("notice/getNotice/{id}")
+    @GetMapping("/notice/getNotice/{id}")
     public LinkedList<Notice> getNotice(@PathVariable String id){
         return mapper.getNotice(id);
     }

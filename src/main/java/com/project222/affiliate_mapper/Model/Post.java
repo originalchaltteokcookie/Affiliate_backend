@@ -10,10 +10,7 @@ public class Post {
     String open_time;
     int market_id;
     String details;
-
-    public String getDetails() {
-        return details;
-    }
+    public String getDetails() {return details;}
 
     public void setDetails(String details) {
         this.details = details;

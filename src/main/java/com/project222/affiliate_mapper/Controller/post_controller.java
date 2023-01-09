@@ -14,8 +14,13 @@ public class post_controller {
 
     public post_controller(post_mapper mapper){this.mapper=mapper;}
 
-    @GetMapping("/post/{category}")
+    @GetMapping("/postList/{category}")
     public List<Post> getPostInfo(@PathVariable int category){
         return mapper.getPostInfo(category);
+    }
+
+    @GetMapping("/post/{market_id}")
+    public Post getPostById(@PathVariable int market_id){
+        return mapper.getPostInfoById(market_id);
     }
 }

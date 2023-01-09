@@ -1,5 +1,6 @@
 package com.project222.affiliate_mapper.View;
 
+import com.project222.affiliate_mapper.Model.user;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -13,4 +14,6 @@ public interface user_mapper {
     int checkID(@Param("id")String id);
     @Select("SELECT COUNT(*) FROM user WHERE id=#{id} AND password=#{password};")
     int Login(@Param("id")String id, @Param("password")String pw);
+    @Select("SELECT name FROM user WHERE id=#{id};")
+    String getUserName(@Param("id")String id);
 }

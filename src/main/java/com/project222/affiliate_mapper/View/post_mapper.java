@@ -10,4 +10,6 @@ public interface post_mapper {
     @Select("SELECT * FROM post WHERE category = #{id};")
     List<Post> getPostInfo(@Param("id")int id);
 
+    @Select("SELECT * FROM post WHERE market_id = #{market_id} LIMIT 1;")
+    Post getPostInfoById(@Param("id")int id);
 }
